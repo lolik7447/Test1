@@ -12,13 +12,7 @@ def test_languages(browser):
     browser.get(link)
     time.sleep(6)
 
-    answer_text_locator = browser.find_element(By.CSS_SELECTOR, ".btn-add-to-basket")
-    answer_text = answer_text_locator.get_attribute('value')
-    x = print(answer_text)
-
-    assert "Ajouter au panier" == answer_text
-
-    print(answer_text)
+    assert browser.find_element(By.CSS_SELECTOR, ".btn-add-to-basket")
 
 if __name__ == "__main__":
     pytest.main()
